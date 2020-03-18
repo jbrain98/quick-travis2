@@ -1,0 +1,108 @@
+{
+    rooms:
+    {
+        active:
+            {
+                ROOM_ID:
+                    {
+                        meta_data:
+                            {
+                                time_created: [YYYY]-[MM]-[DD]T[hh]:[mm]:[ss]Z,
+                                owner: USER_ID,
+                                title: string
+                            },
+                        optionA:
+                            {
+                                picture: url,
+                                voters_normal:
+                                    {
+                                        USER_ID
+                                    },
+                                voters_influencer:
+                                    {
+                                        USER_ID
+                                    }
+                            },
+                        optionB:
+                            {
+                                picture: url,
+                                voters_normal:
+                                    {
+                                        USER_ID
+                                    },
+                                voters_influencer:
+                                    {
+                                        USER_ID
+                                    }
+                            }
+                    }
+            },
+        inactive:
+            {
+                ROOM_ID:
+                    {
+                        meta_data:
+                            {
+                                time_created: [YYYY]-[MM]-[DD]T[hh]:[mm]:[ss]Z,
+                                owner: USER_ID,
+                                title: string
+                            },
+                        optionA:
+                            {
+                                picture: url,
+                                voters_normal:
+                                    {
+                                        USER_ID
+                                    },
+                                voters_influencer:
+                                    {
+                                        USER_ID
+                                    }
+                            },
+                        optionB:
+                            {
+                                picture: url,
+                                voters_normal:
+                                    {
+                                        USER_ID
+                                    },
+                                voters_influencer:
+                                    {
+                                        USER_ID
+                                    }
+                            }
+                    }
+            }
+        },
+    users:
+        {
+            USER_ID:
+                {
+                    meta_data:
+                        {
+                            email: string,
+                            picture: url,
+                            name: string,
+                            badge: enum [normal, influencer],
+                            time_created: [YYYY]-[MM]-[DD]T[hh]:[mm]:[ss]Z,
+                            number_correct: int,
+                            number_voted: int
+                        },
+                    rooms_owned:
+                        {
+                            ROOM_ID:
+                                {
+                                    time_created: [YYYY]-[MM]-[DD]T[hh]:[mm]:[ss]Z
+                                }
+                        },
+                    rooms_voted [OPTIONAL]:
+                        {
+                            ROOM_ID:
+                                {
+                                    correct: boolean,
+                                    time_voted: [YYYY]-[MM]-[DD]T[hh]:[mm]:[ss]Z
+                                }
+                        }
+                }
+        }
+}
