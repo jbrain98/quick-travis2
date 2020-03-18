@@ -17,5 +17,5 @@ jobs:
       script:
         - npm ci
         - npm install -g expo-cli
-        - npx expo login --non-interactive -u $EXPO_USERNAME
+        - npx expo login --non-interactive -u jsbrain98
         - npx expo publish --non-interactive
