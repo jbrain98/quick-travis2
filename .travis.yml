@@ -10,3 +10,11 @@ before_script:
 script:
   - npm ci
   - npx jest --ci --passWithNoTests
+jobs:
+  include:
+    - stage: deploy
+      node_js: lts/*
+      script:
+        - npm ci
+        - npx expo login -u jsbrain98 -p QrE9wyNjygt_4y2
+        - npx expo publish --non-interactive
