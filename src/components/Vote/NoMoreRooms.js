@@ -3,7 +3,7 @@ import { SafeAreaView } from "react-native-safe-area-context"
 import {View } from "react-native"
 import StyledText from "../StyledText/StyledText";
 import {colors} from "../../constants/styles";
-import EmptyBox from "../FancyLoader/EmptyBox";
+//import EmptyBox from "../FancyLoader/EmptyBox";
 const NoMoreRooms = () => (
     <SafeAreaView
         style={{
