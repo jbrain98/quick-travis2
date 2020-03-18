@@ -16,5 +16,6 @@ jobs:
       node_js: lts/*
       script:
         - npm ci
-        - npx expo login --non-interactive -u jsbrain98
+        - npm install -g expo-cli
+        - npx expo login --non-interactive -u $EXPO_USERNAME
         - npx expo publish --non-interactive
