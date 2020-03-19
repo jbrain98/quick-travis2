@@ -4,6 +4,7 @@ import {View } from "react-native"
 import StyledText from "../StyledText/StyledText";
 import {colors} from "../../constants/styles";
 import EmptyBox from "../FancyLoader/EmptyBox";
+
 const NoMoreRooms = () => (
     <SafeAreaView
         style={{
